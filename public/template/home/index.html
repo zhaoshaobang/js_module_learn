@@ -5,12 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>SeaJs验证</title>
+    <script src="../../js/lib/vconsole.min.js"></script>
     <script src="../../js/lib/sea1.3.1.js"></script>
 </head>
 <body>
     <h1>SeaJs 一个文件中多个模块</h1>
     <script>
-        seajs.use("../js/page/home/app");
+        seajs.use("../js/page/home/app", function() {
+            var vConsole = new VConsole();
+            console.log('Hello world');
+        });
     </script>
     <!-- <script src="../../js/page/home/app_dist.js"></script> -->
 </body>
